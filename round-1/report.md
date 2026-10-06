@@ -5,7 +5,7 @@
 
 ## What we concluded
 
-GK-02 returns a score between 0 and 1 and approves every input we have tried so far, with scores ranging from 0.57 to 0.75. Setting every field to its maximum lowers the score, so at least one field has a negative effect at its high end. The `ward` field has a very small effect. `baseline_score` and `vitals_index` appear to raise the score, but our evidence for both is confounded (see below).
+GK-02 returns a score between 0 and 1 and approves every input we have tried so far, with scores ranging from 0.57 to 0.75. Setting every field to its maximum lowers the score, so at least one field has a negative effect at its high end. The `ward` field has a very small effect. `baseline_score` and `vitals_index` appear to raise the score, but our evidence for both is confounded.
 
 ## How we got there
 
