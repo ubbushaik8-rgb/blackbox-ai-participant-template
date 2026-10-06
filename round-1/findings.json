@@ -1,7 +1,7 @@
 {
   "round": "round-1",
   "team": "BB-014",
-  "queries_used": 116,
+  "queries_used": 7,
   "claims": [
     {
       "type": "feature_effect",
