@@ -4,12 +4,14 @@
   "queries_used": 150,
   "claims": [
     {
-      "type": "score_observation",
-      "score": 0.9829,
-      "decision": "APPROVE",
+      "type": "feature_effect",
+      "feature": "age",
+      "direction": "increases",
+      "strength": "strong",
+      "confidence": 0.9,
       "evidence": {
-        "query_ids": [150],
-        "summary": "The highest observed Round 2 score was 0.9829 at query 150. Query 148 also produced the same highest score of 0.9829."
+        "query_ids": [5, 6],
+        "summary": "Only age changed between queries 5 and 6, increasing from 25 to 51.63. The score increased from 0.5097 to 0.6433, a change of +0.1336."
       }
     }
   ]
