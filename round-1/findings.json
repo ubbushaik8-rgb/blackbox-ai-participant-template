@@ -1,17 +1,17 @@
 {
   "round": "round-1",
-  "team": "BB-014",
-  "queries_used": 7,
+  "team": "BB-XXX",
+  "queries_used": 0,
   "claims": [
     {
       "type": "feature_effect",
-      "feature": "ward",
-      "direction": "decreases",
-      "strength": "weak",
-      "confidence": 0.5,
+      "feature": "x1",
+      "direction": "increases",
+      "strength": "strong",
+      "confidence": 0.0,
       "evidence": {
-        "query_ids": [5, 6],
-        "summary": "Only ward changed between query 5 and 6; score moved -0.0074."
+        "query_ids": [],
+        "summary": "Replace this example claim with your own. Every claim needs evidence."
       }
     }
   ]
