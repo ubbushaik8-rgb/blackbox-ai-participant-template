@@ -1,17 +1,15 @@
 {
   "round": "round-2",
-  "team": "BB-XXX",
-  "queries_used": 0,
+  "team": "BB-014",
+  "queries_used": 150,
   "claims": [
     {
-      "type": "feature_effect",
-      "feature": "x1",
-      "direction": "increases",
-      "strength": "strong",
-      "confidence": 0.0,
+      "type": "score_observation",
+      "score": 0.9829,
+      "decision": "APPROVE",
       "evidence": {
-        "query_ids": [],
-        "summary": "Replace this example claim with your own. Every claim needs evidence."
+        "query_ids": [150],
+        "summary": "The highest observed Round 2 score was 0.9829 at query 150. Query 148 also produced the same highest score of 0.9829."
       }
     }
   ]
