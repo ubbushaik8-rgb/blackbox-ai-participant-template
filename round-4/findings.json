@@ -1,17 +1,94 @@
 {
   "round": "round-4",
-  "team": "BB-XXX",
+  "team": "BB-014",
   "queries_used": 0,
   "claims": [
     {
       "type": "feature_effect",
-      "feature": "x1",
+      "feature": "comorbidity_ratio",
+      "direction": "decreases",
+      "strength": "strong",
+      "confidence": 0.95,
+      "evidence": {
+        "query_ids": ["R2 · 68", "R2 · 69"],
+        "summary": "With the other visible inputs held constant, increasing comorbidity_ratio from 0.009 to 0.5 reduced the score from 0.9797 to 0.9308."
+      }
+    },
+    {
+      "type": "feature_effect",
+      "feature": "recent_admissions",
       "direction": "increases",
       "strength": "strong",
-      "confidence": 0.0,
+      "confidence": 0.95,
       "evidence": {
-        "query_ids": [],
-        "summary": "Replace this example claim with your own. Every claim needs evidence."
+        "query_ids": ["R2 · 35", "R2 · 36", "R2 · 37"],
+        "summary": "Changing recent_admissions from 20 to 0 and 5.3 produced substantial score changes: 0.9780 at 20, 0.8753 at 0, and 0.9360 at 5.3."
+      }
+    },
+    {
+      "type": "feature_effect",
+      "feature": "requested_beds",
+      "direction": "decreases",
+      "strength": "medium",
+      "confidence": 0.9,
+      "evidence": {
+        "query_ids": ["R2 · 35", "R2 · 38", "R2 · 39", "R2 · 41", "R2 · 42"],
+        "summary": "With the other visible inputs held constant, requested_beds values of 1, 2, 0.3 and 0.2 produced different scores, with the score generally decreasing as requested_beds increased."
+      }
+    },
+    {
+      "type": "feature_effect",
+      "feature": "ward",
+      "direction": "affects_score",
+      "strength": "medium",
+      "confidence": 0.9,
+      "evidence": {
+        "query_ids": ["R2 · 50", "R2 · 51"],
+        "summary": "Changing ward from B to C while keeping the other visible inputs the same changed the score from 0.9787 to 0.9742."
+      }
+    },
+    {
+      "type": "feature_effect",
+      "feature": "age",
+      "direction": "affects_score",
+      "strength": "medium",
+      "confidence": 0.8,
+      "evidence": {
+        "query_ids": ["R2 · 75", "R2 · 77", "R2 · 78"],
+        "summary": "Controlled age changes around the same baseline produced measurable score changes: age 75 produced 0.9794 while age 66.735 produced 0.9783 and age 72.735 produced 0.9821."
+      }
+    },
+    {
+      "type": "feature_effect",
+      "feature": "baseline_score",
+      "direction": "affects_score",
+      "strength": "weak",
+      "confidence": 0.75,
+      "evidence": {
+        "query_ids": ["R2 · 60", "R2 · 61", "R2 · 62", "R2 · 63"],
+        "summary": "Changing baseline_score while keeping the remaining visible inputs constant produced small but measurable score differences across the tested values."
+      }
+    },
+    {
+      "type": "feature_effect",
+      "feature": "prior_visits",
+      "direction": "affects_score",
+      "strength": "strong",
+      "confidence": 0.9,
+      "evidence": {
+        "query_ids": ["R2 · 35", "R2 · 37", "R2 · 88", "R2 · 87"],
+        "summary": "Changing prior_visits produced noticeable score changes in controlled observations, indicating that the feature contributes to the model output."
+      }
+    },
+    {
+      "type": "decision_behavior",
+      "feature": "score",
+      "direction": "higher_scores_correlate_with_approve",
+      "strength": "strong",
+      "confidence": 0.95,
+      "evidence": {
+        "query_ids": ["R2 · 7", "R2 · 35", "R2 · 50"],
+        "summary": "The observed DECLINE example has a score of 0.4287, while the tested APPROVE examples have substantially higher scores. This supports a strong relationship between score magnitude and the final decision, although the exact decision threshold was not established."
       }
     }
   ]
